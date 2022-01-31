@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext } from 'react';
+import ApodCover from './components/ApodCover/ApodCover';
+import ApodContent from './components/ApodContent/ApodContent';
+import StatusScreen from './components/StatusScreen/StatusScreen';
+import useHttp from './utils/hooks/useHttp';
+import Header from './components/Header/Header';
+import { StoreContext } from './utils/store/StoreContext';
 
-function App() {
+const App = () => {
+  const { fetchData } = useHttp();
+  const { isStatusScreen } = useContext(StoreContext);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      {isStatusScreen && <StatusScreen />}
+      {!isStatusScreen && (
+        <>
+          <ApodCover />
+          <ApodContent />
+        </>
+      )}
+    </>
   );
-}
+};
 
 export default App;

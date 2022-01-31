@@ -1,0 +1,29 @@
+.status-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: flying 15s infinite alternate;
+}
+
+.status-container p {
+  font-size: 20px;
+}
+
+@keyframes flying {
+  from {
+    background-size: 100% 100%;
+  }
+
+  to {
+    background-size: 200% 200%;
+  }
+}
