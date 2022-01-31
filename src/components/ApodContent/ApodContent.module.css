@@ -1,0 +1,61 @@
+.apod-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-top: 100px;
+}
+
+.apod-content {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.apod-content h1 {
+  text-shadow: 0 3px 3px rgb(0 0 0 / 100%);
+}
+
+.apod-content img,
+.apod-content iframe {
+  width: 100%;
+  border: none;
+}
+
+.apod-content iframe {
+  height: 480px;
+}
+
+.apod-caption {
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.apod-caption p {
+  font-size: 10px;
+  margin: 0;
+}
+
+.apod-description {
+  background-color: rgba(0 0 0 / 50%);
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 769px) {
+  .apod-container {
+    padding-top: 60px;
+  }
+}

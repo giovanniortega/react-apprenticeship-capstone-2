@@ -1,0 +1,48 @@
+.datepicker-control {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.datepicker-control label {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.datepicker-control input {
+  margin-right: 5px;
+}
+
+.send-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  position: relative;
+  line-height: 10px;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  border-left: 22px solid white;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+@media (min-width: 769px) {
+  .datepicker-control {
+    flex-flow: row;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+  }
+
+  .datepicker-control label {
+    margin-bottom: 0;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
