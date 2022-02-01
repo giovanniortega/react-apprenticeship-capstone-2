@@ -9,6 +9,7 @@ const ApodCover = () => {
     <section
       className={classes['image-cover']}
       style={{ backgroundImage: `url(${apiData.url})` }}
+      data-testid="imagecover"
     ></section>
   );
 };
