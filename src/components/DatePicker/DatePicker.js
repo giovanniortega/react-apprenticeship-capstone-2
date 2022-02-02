@@ -27,6 +27,7 @@ const DatePicker = () => {
           min="2018-01-01"
           max={date}
           ref={datePickerInput}
+          data-testid="datepicker"
         ></input>
         <button type="submit" className={classes['send-btn']} name="search">
           Search
